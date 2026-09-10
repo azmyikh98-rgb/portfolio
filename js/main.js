@@ -260,6 +260,10 @@
     stampYear();
     localStorage.setItem("azmy-lang", lang);
     state.lang = lang;
+
+    if(typeof lightbox !== "undefined" && lightbox.classList.contains("is-open") && lastFocusedCard){
+      openProjectModal(lastFocusedCard);
+    }
   }
 
   document.getElementById("langId").addEventListener("click", function(){ applyLanguage("id"); });
@@ -336,30 +340,49 @@
   document.querySelectorAll(".reveal").forEach(function(el){ revealObserver.observe(el); });
 
   /* ---------------------------------------------------------
-     7. Lightbox for project detail screenshots
+     7. Project detail modal (click any project card)
      --------------------------------------------------------- */
   const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightboxImg");
-  const lightboxCaption = document.getElementById("lightboxCaption");
   const lightboxClose = document.getElementById("lightboxClose");
+  const pmImg1 = document.getElementById("pmImg1");
+  const pmImg2 = document.getElementById("pmImg2");
+  const pmOrg = document.getElementById("pmOrg");
+  const pmTitle = document.getElementById("pmTitle");
+  const pmText = document.getElementById("pmText");
+  const pmTags = document.getElementById("pmTags");
+  let lastFocusedCard = null;
 
-  document.querySelectorAll("[data-lightbox]").forEach(function(btn){
-    btn.addEventListener("click", function(){
-      const src = btn.getAttribute("data-lightbox");
-      const captionKey = btn.getAttribute("data-caption-i18n");
-      const dict = translations[state.lang] || translations.id;
-      const caption = (captionKey && dict[captionKey]) ? dict[captionKey] : btn.getAttribute("data-caption");
-      lightboxImg.src = src;
-      lightboxImg.alt = caption || "";
-      lightboxCaption.textContent = caption || "";
-      lightbox.classList.add("is-open");
-      lightboxClose.focus();
-    });
-  });
+  function openProjectModal(card){
+    const dict = translations[state.lang] || translations.id;
+    const org = card.getAttribute("data-org");
+    const title = dict[card.getAttribute("data-title-key")] || "";
+    const text = dict[card.getAttribute("data-text-key")] || "";
+    const tags = (card.getAttribute("data-tags") || "").split(",").filter(Boolean);
+    const img = card.getAttribute("data-img");
+    const detailImg = card.getAttribute("data-detail-img");
+    const cardImg = card.querySelector("img");
+
+    pmOrg.textContent = org;
+    pmTitle.textContent = title;
+    pmText.textContent = text;
+    pmImg1.src = img;
+    pmImg1.alt = cardImg ? cardImg.alt : title;
+    pmImg2.src = detailImg;
+    pmImg2.alt = title;
+    pmTags.innerHTML = tags.map(function(t){ return '<span class="tag">' + t + '</span>'; }).join("");
+
+    lastFocusedCard = card;
+    lightbox.classList.add("is-open");
+    lightboxClose.focus();
+  }
   function closeLightbox(){
     lightbox.classList.remove("is-open");
-    lightboxImg.src = "";
+    pmImg1.src = ""; pmImg2.src = "";
+    if(lastFocusedCard) lastFocusedCard.focus();
   }
+  document.querySelectorAll(".project-card").forEach(function(card){
+    card.addEventListener("click", function(){ openProjectModal(card); });
+  });
   lightboxClose.addEventListener("click", closeLightbox);
   lightbox.addEventListener("click", function(e){ if(e.target === lightbox) closeLightbox(); });
   document.addEventListener("keydown", function(e){ if(e.key === "Escape") closeLightbox(); });
