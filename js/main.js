@@ -39,7 +39,6 @@
       "about.p3Text":"Selalu terlibat bersama Business Analyst dan Developer dari kickoff sampai rilis.",
 
       "exp.title":"Pengalaman kerja",
-      "exp.lede":"Dari perbankan digital hingga sistem manufaktur — perjalanan merancang produk enterprise yang benar-benar dipakai.",
       "exp.job1Role":"UI/UX Designer",
       "exp.job1Period":"Jul 2023 — Sekarang",
       "exp.job1Org":"PT. Lanius Inovasi Indonesia (Machine Vision), Malang",
@@ -57,7 +56,6 @@
       "exp.job2Bullet4":"Merancang antarmuka berfokus pada usability untuk aplikasi perbankan digital.",
 
       "proj.title":"Proyek pilihan",
-      "proj.lede":"Studi kasus desain sistem enterprise — dari riset kebutuhan sampai antarmuka siap produksi.",
       "proj.viewDetail":"Lihat detail",
       "proj.p1Title":"Digitalisasi lini produksi motor listrik",
       "proj.p1Text":"Merancang MES untuk monitoring produksi real-time, PRTS untuk pelacakan penyelesaian masalah, dan sistem traceability material serta produk pada lini manufaktur ALVA.",
@@ -81,7 +79,6 @@
       "proj.p5Caption":"PRTS — Issue Dashboard, PT Sumber Mas Autorindo",
 
       "explore.title":"Eksplorasi desain",
-      "explore.lede":"Di luar proyek enterprise, saya rutin membuat eksplorasi UI dan berbagi proses desain.",
       "explore.dribbbleTitle":"Studi kasus & konsep di Dribbble",
       "explore.dribbbleText":"Kumpulan eksplorasi dashboard, mobile app, dan latihan visual bebas di luar pekerjaan klien.",
       "explore.viewProfile":"Lihat profil Dribbble",
@@ -149,7 +146,6 @@
       "about.p3Text":"Always aligned with Business Analysts and developers from kickoff to release.",
 
       "exp.title":"Work experience",
-      "exp.lede":"From digital banking to manufacturing systems — a track record of designing enterprise products that get used.",
       "exp.job1Role":"UI/UX Designer",
       "exp.job1Period":"Jul 2023 — Present",
       "exp.job1Org":"PT. Lanius Inovasi Indonesia (Machine Vision), Malang",
@@ -167,7 +163,6 @@
       "exp.job2Bullet4":"Designed interfaces focused on usability for digital banking applications.",
 
       "proj.title":"Selected projects",
-      "proj.lede":"Enterprise system design case studies — from requirement research to production-ready interfaces.",
       "proj.viewDetail":"View detail",
       "proj.p1Title":"Digitizing an electric-motorcycle production line",
       "proj.p1Text":"Designed an MES for real-time production monitoring, a PRTS for issue-resolution tracking, and a material & product traceability system for ALVA's manufacturing line.",
@@ -191,7 +186,6 @@
       "proj.p5Caption":"PRTS — Issue Dashboard, PT Sumber Mas Autorindo",
 
       "explore.title":"Design exploration",
-      "explore.lede":"Beyond enterprise projects, I regularly publish UI explorations and share my design process.",
       "explore.dribbbleTitle":"Case studies & concepts on Dribbble",
       "explore.dribbbleText":"A collection of dashboard explorations, mobile app concepts, and free-form visual practice outside client work.",
       "explore.viewProfile":"View Dribbble profile",
