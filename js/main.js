@@ -103,11 +103,9 @@
       "edu.course2Text":"Riset pengguna, strategi dan ruang lingkup produk, arsitektur informasi, wireframe, dan mockup menggunakan Figma.",
 
       "contact.title":"Mari berkolaborasi",
-      "contact.text":"Terbuka untuk peran UI/UX Designer, proyek freelance, maupun diskusi seputar desain sistem enterprise. Hubungi saya lewat email, telepon, atau media sosial di samping.",
+      "contact.text":"Terbuka untuk peran UI/UX Designer, proyek freelance, maupun diskusi seputar desain sistem enterprise. Hubungi saya lewat email atau media sosial di samping.",
       "contact.ctaEmail":"Kirim email",
       "contact.ctaCv":"Unduh CV",
-      "contact.copy":"Salin",
-      "contact.copied":"Tersalin",
 
       "footer.credit":"© <span id=\"year\"></span> Muhammad Azmy Ikhwan."
     },
@@ -206,11 +204,9 @@
       "edu.course2Text":"User research, product strategy and scope, information architecture, wireframes, and mockups using Figma.",
 
       "contact.title":"Let's work together",
-      "contact.text":"Open to UI/UX Designer roles, freelance projects, and conversations about enterprise system design. Reach me by email, phone, or the social links alongside.",
+      "contact.text":"Open to UI/UX Designer roles, freelance projects, and conversations about enterprise system design. Reach me by email or the social links alongside.",
       "contact.ctaEmail":"Send an email",
       "contact.ctaCv":"Download CV",
-      "contact.copy":"Copy",
-      "contact.copied":"Copied",
 
       "footer.credit":"© <span id=\"year\"></span> Muhammad Azmy Ikhwan."
     }
@@ -407,23 +403,6 @@
   lightboxClose.addEventListener("click", closeLightbox);
   lightbox.addEventListener("click", function(e){ if(e.target === lightbox) closeLightbox(); });
   document.addEventListener("keydown", function(e){ if(e.key === "Escape") closeLightbox(); });
-
-  /* ---------------------------------------------------------
-     8. Copy-to-clipboard buttons (contact section)
-     --------------------------------------------------------- */
-  document.querySelectorAll(".copy-btn").forEach(function(btn){
-    const originalKey = "contact.copy";
-    btn.addEventListener("click", function(){
-      const value = btn.getAttribute("data-copy");
-      navigator.clipboard.writeText(value).then(function(){
-        const dict = translations[state.lang] || translations.id;
-        btn.textContent = dict["contact.copied"] || "Copied";
-        setTimeout(function(){
-          btn.textContent = dict[originalKey] || "Copy";
-        }, 1600);
-      });
-    });
-  });
 
   /* ---------------------------------------------------------
      9. Footer year

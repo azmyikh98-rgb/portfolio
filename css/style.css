@@ -476,7 +476,9 @@ section + section{border-top:1px solid var(--line);}
   display:flex; align-items:center; justify-content:space-between; gap:14px;
   border:1px solid var(--graphite-line); border-radius:var(--radius-s);
   padding:14px 16px; background:var(--graphite-2);
+  transition:border-color .2s var(--ease), transform .2s var(--ease);
 }
+a.contact-row:hover{border-color:var(--accent); transform:translateY(-2px);}
 .contact-row .c-label{display:flex; align-items:center; gap:10px; font-size:.9rem; color:#C7C8CF;}
 .contact-row .c-label svg{width:16px; height:16px; color:var(--accent);}
 .contact-row .c-value{font-family:var(--font-mono); font-size:.85rem;}
