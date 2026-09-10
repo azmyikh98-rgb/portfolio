@@ -119,14 +119,6 @@ p{margin:0;}
   font-family:var(--font-display); font-weight:600; font-size:1.02rem;
   white-space:nowrap;
 }
-.logo .mark{
-  width:34px; height:34px; border-radius:9px;
-  background:var(--ink); color:var(--paper);
-  display:flex; align-items:center; justify-content:center;
-  font-family:var(--font-mono); font-size:.85rem; font-weight:600;
-  flex-shrink:0;
-}
-[data-theme="dark"] .logo .mark{background:var(--accent); color:#15161B;}
 
 .main-nav{display:flex; align-items:center; gap:28px;}
 .main-nav a{
