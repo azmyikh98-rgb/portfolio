@@ -447,25 +447,26 @@ section + section{border-top:1px solid var(--line);}
    Contact
    ----------------------------------------------------------- */
 .contact-panel{
-  background:var(--graphite); color:var(--graphite-text);
+  background:var(--panel); color:var(--ink);
+  border:1px solid var(--line);
   border-radius:var(--radius-l); padding:56px; display:grid;
   grid-template-columns:1.1fr .9fr; gap:48px; align-items:center;
 }
 .contact-panel h2{font-size:clamp(1.6rem, 3vw, 2.2rem); font-weight:600; margin-bottom:16px;}
-.contact-panel p{color:#B7B8C0; font-size:1.02rem; max-width:44ch;}
+.contact-panel p{color:var(--ink-soft); font-size:1.02rem; max-width:44ch;}
 .contact-list{display:flex; flex-direction:column; gap:14px;}
 .contact-row{
   display:flex; align-items:center; justify-content:space-between; gap:14px;
-  border:1px solid var(--graphite-line); border-radius:var(--radius-s);
-  padding:14px 16px; background:var(--graphite-2);
+  border:1px solid var(--line); border-radius:var(--radius-s);
+  padding:14px 16px; background:var(--panel-2);
   transition:border-color .2s var(--ease), transform .2s var(--ease);
 }
 a.contact-row:hover{border-color:var(--accent); transform:translateY(-2px);}
-.contact-row .c-label{display:flex; align-items:center; gap:10px; font-size:.9rem; color:#C7C8CF;}
+.contact-row .c-label{display:flex; align-items:center; gap:10px; font-size:.9rem; color:var(--ink-soft);}
 .contact-row .c-label svg{width:16px; height:16px; color:var(--accent);}
 .contact-row .c-value{font-family:var(--font-mono); font-size:.85rem;}
 .copy-btn{
-  background:none; border:1px solid var(--graphite-line); color:var(--graphite-text);
+  background:none; border:1px solid var(--line); color:var(--ink);
   border-radius:6px; padding:6px 10px; font-family:var(--font-mono); font-size:.72rem;
   transition:border-color .2s var(--ease), background .2s var(--ease);
 }
@@ -473,7 +474,7 @@ a.contact-row:hover{border-color:var(--accent); transform:translateY(-2px);}
 .contact-panel .btn-row{margin-top:8px;}
 .contact-panel .btn-primary{background:var(--accent); color:#15161B;}
 .contact-panel .btn-primary:hover{background:var(--accent-strong);}
-.contact-panel .btn-ghost{border-color:var(--graphite-line); color:var(--graphite-text);}
+.contact-panel .btn-ghost{border-color:var(--line); color:var(--ink);}
 .contact-panel .btn-ghost:hover{border-color:var(--accent);}
 
 /* -----------------------------------------------------------
