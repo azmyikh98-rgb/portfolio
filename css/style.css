@@ -358,8 +358,9 @@ section + section{border-top:1px solid var(--line);}
 /* -----------------------------------------------------------
    Exploration / dribbble & instagram
    ----------------------------------------------------------- */
-.explore-grid{display:grid; grid-template-columns:1fr 1fr; gap:24px;}
+.explore-grid{display:grid; grid-template-columns:1fr; gap:24px;}
 .explore-card{
+  max-width:420px;
   border:1px solid var(--line); border-radius:var(--radius-m); padding:30px;
   background:var(--panel); display:flex; flex-direction:column; gap:16px;
   transition:border-color .2s var(--ease), transform .2s var(--ease);

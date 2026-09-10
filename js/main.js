@@ -81,9 +81,6 @@
       "explore.dribbbleTitle":"Studi kasus & konsep di Dribbble",
       "explore.dribbbleText":"Kumpulan eksplorasi dashboard, mobile app, dan latihan visual bebas di luar pekerjaan klien.",
       "explore.viewProfile":"Lihat profil Dribbble",
-      "explore.igTitle":"Proses desain di Instagram",
-      "explore.igText":"Cuplikan proses kerja, riset, dan behind-the-scenes dari proyek yang sedang dikerjakan.",
-      "explore.viewIg":"Lihat Instagram",
 
       "skills.title":"Keahlian",
       "skills.group1":"Spesialisasi",
@@ -187,9 +184,6 @@
       "explore.dribbbleTitle":"Case studies & concepts on Dribbble",
       "explore.dribbbleText":"A collection of dashboard explorations, mobile app concepts, and free-form visual practice outside client work.",
       "explore.viewProfile":"View Dribbble profile",
-      "explore.igTitle":"Design process on Instagram",
-      "explore.igText":"Behind-the-scenes glimpses of the process and research behind projects in progress.",
-      "explore.viewIg":"View Instagram",
 
       "skills.title":"Skills",
       "skills.group1":"Specialization",
