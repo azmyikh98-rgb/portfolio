@@ -28,7 +28,7 @@
       "hero.photoAlt":"Foto Muhammad Azmy Ikhwan",
 
       "about.title":"Tentang saya",
-      "about.p1":"Saya UI/UX Designer dengan lebih dari 4 tahun pengalaman merancang antarmuka untuk sistem enterprise — mulai dari lini produksi manufaktur, manajemen perawatan aset, hingga akses keluar-masuk perusahaan. Sebagian besar pekerjaan saya berputar di satu masalah yang sama: mengubah proses operasional yang rumit menjadi antarmuka yang bisa langsung dipahami oleh operator, teknisi, dan manajer di lapangan.",
+      "about.p1":"Saya UI/UX Designer dengan lebih dari 4 tahun pengalaman merancang antarmuka untuk sistem enterprise, mulai dari lini produksi manufaktur, manajemen perawatan aset, hingga akses keluar-masuk perusahaan. Sebagian besar pekerjaan saya berputar di satu masalah yang sama: mengubah proses operasional yang rumit menjadi antarmuka yang bisa langsung dipahami oleh operator, teknisi, dan manajer di lapangan.",
       "about.p2":"Saya bekerja dekat dengan Business Analyst dan tim developer sejak tahap riset kebutuhan, bukan hanya di tahap visual. Setiap wireframe dan prototype dirancang agar mudah dieksekusi oleh tim engineering tanpa banyak revisi bolak-balik.",
       "about.p1Title":"Riset sebelum desain",
       "about.p1Text":"Setiap alur dimulai dari kebutuhan pengguna dan proses bisnis nyata, bukan asumsi.",
@@ -131,7 +131,7 @@
       "hero.photoAlt":"Photo of Muhammad Azmy Ikhwan",
 
       "about.title":"About me",
-      "about.p1":"I'm a UI/UX Designer with 4+ years of experience designing interfaces for enterprise systems — from manufacturing production lines and asset maintenance to company access control. Most of my work circles one problem: turning complex operational processes into interfaces that operators, technicians, and floor managers can understand at a glance.",
+      "about.p1":"I'm a UI/UX Designer with 4+ years of experience designing interfaces for enterprise systems, from manufacturing production lines and asset maintenance to company access control. Most of my work circles one problem: turning complex operational processes into interfaces that operators, technicians, and floor managers can understand at a glance.",
       "about.p2":"I work closely with Business Analysts and developers from the research stage onward, not just at the visual stage. Every wireframe and prototype is built so engineering teams can implement it without endless back-and-forth revisions.",
       "about.p1Title":"Research before design",
       "about.p1Text":"Every flow starts from real user needs and business processes, not assumptions.",
