@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muhammad Azmy Ikhwan — UI/UX Designer</title>
+<meta name="description" data-i18n="meta.desc" content="Portofolio Muhammad Azmy Ikhwan, UI/UX Designer yang merancang dashboard dan sistem enterprise untuk manufaktur, maintenance, dan operasional harian.">
+<meta name="theme-color" content="#EFEEEA">
+<!-- TODO ganti dengan URL asli setelah deploy, mis. https://azmyikhwan.vercel.app/ -->
+<meta name="robots" content="index, follow">
+<meta name="author" content="Muhammad Azmy Ikhwan">
+
+<!-- Open Graph / social preview -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Muhammad Azmy Ikhwan — UI/UX Designer">
+<meta property="og:description" content="Portofolio Muhammad Azmy Ikhwan, UI/UX Designer yang merancang dashboard dan sistem enterprise untuk manufaktur, maintenance, dan operasional harian.">
+<meta property="og:image" content="assets/img/profile.jpg">
+<meta property="og:locale" content="id_ID">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Muhammad Azmy Ikhwan — UI/UX Designer">
+<meta name="twitter:description" content="Portofolio UI/UX Designer — dashboard &amp; sistem enterprise untuk manufaktur, maintenance, dan operasional harian.">
+<meta name="twitter:image" content="assets/img/profile.jpg">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%23C9791C%22/><text x=%2216%22 y=%2222%22 font-family=%22monospace%22 font-size=%2216%22 fill=%22%2315161B%22 text-anchor=%22middle%22>A</text></svg>">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%23C9791C%22/><text x=%2216%22 y=%2222%22 font-family=%22monospace%22 font-size=%2216%22 fill=%22%2315161B%22 text-anchor=%22middle%22>A</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a href="#main" class="skip-link" data-i18n="a11y.skip">Langsung ke isi</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="#home" class="logo" aria-label="Muhammad Azmy Ikhwan">
+      <span class="mark">AI</span>
+      <span>Azmy Ikhwan</span>
+    </a>
+
+    <nav class="main-nav" id="mainNav" aria-label="Navigasi utama">
+      <a href="#home" data-i18n="nav.home">Beranda</a>
+      <a href="#about" data-i18n="nav.about">Tentang</a>
+      <a href="#experience" data-i18n="nav.experience">Pengalaman</a>
+      <a href="#projects" data-i18n="nav.projects">Proyek</a>
+      <a href="#exploration" data-i18n="nav.exploration">Eksplorasi</a>
+      <a href="#skills" data-i18n="nav.skills">Keahlian</a>
+      <a href="#contact" data-i18n="nav.contact">Kontak</a>
+    </nav>
+
+    <div class="header-tools">
+      <div class="lang-switch" role="group" aria-label="Bahasa">
+        <button id="langId" class="active" data-lang="id">ID</button>
+        <button id="langEn" data-lang="en">EN</button>
+      </div>
+      <button id="themeToggle" class="icon-btn" aria-label="Ganti mode gelap/terang" aria-pressed="false">
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"/></svg>
+      </button>
+      <button id="navToggle" class="nav-toggle" aria-label="Buka menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="wrap">
+      <div class="hero-text">
+        <p class="eyebrow"><span class="dot"></span><span data-i18n="hero.eyebrow">Tersedia untuk proyek baru</span></p>
+        <h1 data-i18n="hero.headline">Desain antarmuka yang membuat sistem rumit terasa sederhana.</h1>
+        <p class="lede" data-i18n="hero.lede">4+ tahun merancang dashboard, wireframe, dan prototype untuk sistem manufaktur, maintenance, dan operasional harian di skala enterprise — mulai dari riset kebutuhan pengguna sampai desain yang siap dibangun tim developer.</p>
+
+        <div class="btn-row">
+          <a href="#projects" class="btn btn-primary" data-i18n="hero.ctaProjects">Lihat proyek</a>
+          <a href="assets/cv/CV_Muhammad_Azmy_Ikhwan.pdf" class="btn btn-ghost" download data-i18n="hero.ctaCv">Unduh CV</a>
+        </div>
+
+        <div class="contact-chips">
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18v12H3z"/><path d="M3 7l9 6 9-6"/></svg>azmyikh98@gmail.com</span>
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M10 18h4"/></svg>+62 821-3534-8966</span>
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/></svg><span data-i18n="hero.locationVal">Malang, Indonesia</span></span>
+        </div>
+
+        <div class="stat-row">
+          <div class="stat"><b>4+</b><span data-i18n="hero.stat1">Tahun pengalaman UI/UX</span></div>
+          <div class="stat"><b>6</b><span data-i18n="hero.stat2">Sistem enterprise dirancang</span></div>
+          <div class="stat"><b>6</b><span data-i18n="hero.stat3">Perusahaan &amp; klien</span></div>
+          <div class="stat"><b>2</b><span data-i18n="hero.stat4">Sektor industri</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="photo-card">
+          <img src="assets/img/profile.jpg" alt="Foto Muhammad Azmy Ikhwan" data-i18n-alt="hero.photoAlt">
+          <div class="photo-badge"><span class="dot"></span> Muhammad Azmy Ikhwan</div>
+        </div>
+
+        <div class="status-widget" id="statusWidget">
+          <div class="sw-head">
+            <span class="sw-title" data-i18n="hero.widgetTitle">LINE DETAIL — REALTIME</span>
+            <span id="clock">00:00:00</span>
+          </div>
+          <div class="sw-grid">
+            <div class="sw-tile"><b>98%</b><span>OEE</span></div>
+            <div class="sw-tile"><b>94%</b><span data-i18n="hero.widgetAvail">Availability</span></div>
+            <div class="sw-tile"><b>100%</b><span data-i18n="hero.widgetQuality">Quality</span></div>
+            <div class="sw-tile"><b>666</b><span data-i18n="hero.widgetPerf">Performance</span></div>
+          </div>
+          <div class="sw-bars">
+            <div class="sw-bar-row"><span class="lbl">Station 01</span><span class="sw-bar-track"><span class="sw-bar-fill" style="--w:92%"></span></span></div>
+            <div class="sw-bar-row"><span class="lbl">Station 02</span><span class="sw-bar-track"><span class="sw-bar-fill" style="--w:76%"></span></span></div>
+            <div class="sw-bar-row"><span class="lbl">Station 03</span><span class="sw-bar-track"><span class="sw-bar-fill" style="--w:63%"></span></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <p class="section-num">01</p>
+          <h2 data-i18n="about.title">Tentang saya</h2>
+        </div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <p data-i18n="about.p1">Saya UI/UX Designer dengan lebih dari 4 tahun pengalaman merancang antarmuka untuk sistem enterprise — mulai dari lini produksi manufaktur, manajemen perawatan aset, hingga akses keluar-masuk perusahaan. Sebagian besar pekerjaan saya berputar di satu masalah yang sama: mengubah proses operasional yang rumit menjadi antarmuka yang bisa langsung dipahami oleh operator, teknisi, dan manajer di lapangan.</p>
+          <p data-i18n="about.p2">Saya bekerja dekat dengan Business Analyst dan tim developer sejak tahap riset kebutuhan, bukan hanya di tahap visual. Setiap wireframe dan prototype dirancang agar mudah dieksekusi oleh tim engineering tanpa banyak revisi bolak-balik — dan situs ini sendiri saya bangun dari nol untuk membuktikannya.</p>
+        </div>
+
+        <div class="principles reveal">
+          <div class="principle">
+            <span class="idx">01</span>
+            <div>
+              <h3 data-i18n="about.p1Title">Riset sebelum desain</h3>
+              <p data-i18n="about.p1Text">Setiap alur dimulai dari kebutuhan pengguna dan proses bisnis nyata, bukan asumsi.</p>
+            </div>
+          </div>
+          <div class="principle">
+            <span class="idx">02</span>
+            <div>
+              <h3 data-i18n="about.p2Title">Desain siap-bangun</h3>
+              <p data-i18n="about.p2Text">Wireframe dan prototype disusun agar mudah diterjemahkan developer menjadi produk nyata.</p>
+            </div>
+          </div>
+          <div class="principle">
+            <span class="idx">03</span>
+            <div>
+              <h3 data-i18n="about.p3Title">Komunikasi lintas tim</h3>
+              <p data-i18n="about.p3Text">Selalu terlibat bersama Business Analyst dan Developer dari kickoff sampai rilis.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section id="experience">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <p class="section-num">02</p>
+          <h2 data-i18n="exp.title">Pengalaman kerja</h2>
+        </div>
+        <p class="section-lede" data-i18n="exp.lede">Dari perbankan digital hingga sistem manufaktur — perjalanan merancang produk enterprise yang benar-benar dipakai.</p>
+      </div>
+
+      <div class="timeline reveal">
+        <div class="tl-item">
+          <div class="tl-head">
+            <span class="tl-role" data-i18n="exp.job1Role">UI/UX Designer</span>
+            <span class="tl-period" data-i18n="exp.job1Period">Jul 2023 — Sekarang</span>
+          </div>
+          <p class="tl-org" data-i18n="exp.job1Org">PT. Lanius Inovasi Indonesia (Machine Vision), Malang</p>
+          <ul class="tl-list">
+            <li data-i18n="exp.job1Bullet1">Berkolaborasi dengan Business Analyst merancang alur sistem sesuai kebutuhan bisnis dan objektif proyek.</li>
+            <li data-i18n="exp.job1Bullet2">Melakukan riset kebutuhan pengguna dan analisis requirement, termasuk kebutuhan data dan perancangan dashboard.</li>
+            <li data-i18n="exp.job1Bullet3">Mengembangkan prototype interaktif untuk validasi konsep sebelum tahap pengembangan.</li>
+            <li data-i18n="exp.job1Bullet4">Berkontribusi menyempurnakan design system untuk konsistensi dan efisiensi proses desain.</li>
+            <li data-i18n="exp.job1Bullet5">Merancang alur pengguna dan antarmuka untuk lima sistem enterprise di lima perusahaan berbeda.</li>
+          </ul>
+          <div class="tl-tags">
+            <span class="tag">Gate Pass Management</span>
+            <span class="tag">Daily Management System</span>
+            <span class="tag">MES</span>
+            <span class="tag">CMMS</span>
+            <span class="tag">PRTS</span>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-head">
+            <span class="tl-role" data-i18n="exp.job2Role">UI/UX Designer</span>
+            <span class="tl-period" data-i18n="exp.job2Period">Nov 2021 — Jan 2023</span>
+          </div>
+          <p class="tl-org" data-i18n="exp.job2Org">PT. Infosys Solusi Terpadu, Yogyakarta</p>
+          <ul class="tl-list">
+            <li data-i18n="exp.job2Bullet1">Berkontribusi mengembangkan design system dengan pendekatan Atomic Design untuk konsistensi dan skalabilitas antarmuka.</li>
+            <li data-i18n="exp.job2Bullet2">Berkolaborasi dengan Business Analyst memvalidasi kebutuhan sistem sebelum proses desain UI dimulai.</li>
+            <li data-i18n="exp.job2Bullet3">Membuat wireframe dan struktur alur pengguna untuk meminimalkan revisi pada fase pengembangan.</li>
+            <li data-i18n="exp.job2Bullet4">Merancang antarmuka berfokus pada usability untuk aplikasi perbankan digital.</li>
+          </ul>
+          <div class="tl-tags">
+            <span class="tag">BTN Internet Banking Business Portal</span>
+            <span class="tag">BTN Internet Banking Business</span>
+            <span class="tag">BTN Property Mobile</span>
+            <span class="tag">BTN Mobile Banking</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section id="projects">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <p class="section-num">03</p>
+          <h2 data-i18n="proj.title">Proyek pilihan</h2>
+        </div>
+        <p class="section-lede" data-i18n="proj.lede">Studi kasus desain sistem enterprise — dari riset kebutuhan sampai antarmuka siap produksi.</p>
+      </div>
+
+      <div class="project-grid">
+
+        <article class="project-card reveal">
+          <div class="p-media">
+            <img src="assets/img/electra-mes.jpg" alt="Dashboard MES, PRTS, dan Traceability System untuk PT Electra Mobilitas Indonesia" data-i18n-alt="proj.p1ImgAlt">
+          </div>
+          <div class="p-body">
+            <p class="p-org">PT Electra Mobilitas Indonesia (ALVA)</p>
+            <h3 data-i18n="proj.p1Title">Digitalisasi lini produksi motor listrik</h3>
+            <p data-i18n="proj.p1Text">Merancang MES untuk monitoring produksi real-time, PRTS untuk pelacakan penyelesaian masalah, dan sistem traceability material serta produk pada lini manufaktur ALVA.</p>
+            <div class="p-tags">
+              <span class="tag">MES</span><span class="tag">PRTS</span><span class="tag">Traceability</span>
+            </div>
+            <div class="p-actions">
+              <button class="p-link" data-lightbox="assets/img/electra-mes-detail.jpg" data-caption-i18n="proj.p1Caption" data-caption="MES — Line Detail Realtime, PT Electra Mobilitas Indonesia">
+                <span data-i18n="proj.viewDetail">Lihat detail</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="p-media">
+            <img src="assets/img/paragon-cmms.jpg" alt="Dashboard CMMS untuk PT Paragon Technology and Innovation" data-i18n-alt="proj.p2ImgAlt">
+          </div>
+          <div class="p-body">
+            <p class="p-org">PT Paragon Technology and Innovation</p>
+            <h3 data-i18n="proj.p2Title">Digitalisasi manajemen perawatan aset</h3>
+            <p data-i18n="proj.p2Text">Merancang CMMS untuk mengelola work order, penjadwalan maintenance, dan pelaporan kondisi aset serta fasilitas secara terpusat.</p>
+            <div class="p-tags">
+              <span class="tag">CMMS</span><span class="tag">Work Order</span>
+            </div>
+            <div class="p-actions">
+              <button class="p-link" data-lightbox="assets/img/paragon-cmms-detail.jpg" data-caption-i18n="proj.p2Caption" data-caption="CMMS — Work Order &amp; Approval Center, PT Paragon Technology and Innovation">
+                <span data-i18n="proj.viewDetail">Lihat detail</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="p-media">
+            <img src="assets/img/zekindo-dms.jpg" alt="Dashboard Daily Management System untuk PT Zekindo Kimiatama" data-i18n-alt="proj.p3ImgAlt">
+          </div>
+          <div class="p-body">
+            <p class="p-org">PT Zekindo Kimiatama</p>
+            <h3 data-i18n="proj.p3Title">Monitoring operasional harian</h3>
+            <p data-i18n="proj.p3Text">Daily Management System untuk memantau dan mengevaluasi aktivitas operasional harian secara real-time dan terstruktur di lingkungan produksi kimia.</p>
+            <div class="p-tags">
+              <span class="tag">DMS</span><span class="tag">Sales Order</span>
+            </div>
+            <div class="p-actions">
+              <button class="p-link" data-lightbox="assets/img/zekindo-dms-detail.jpg" data-caption-i18n="proj.p3Caption" data-caption="DMS — Manage Delivery Plan, PT Zekindo Kimiatama">
+                <span data-i18n="proj.viewDetail">Lihat detail</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="p-media">
+            <img src="assets/img/panasonic-gatepass.jpg" alt="Dashboard Gate Pass Management System untuk PT Panasonic Device Batam" data-i18n-alt="proj.p4ImgAlt">
+          </div>
+          <div class="p-body">
+            <p class="p-org">PT Panasonic Device Batam</p>
+            <h3 data-i18n="proj.p4Title">Digitalisasi akses keluar-masuk pabrik</h3>
+            <p data-i18n="proj.p4Text">Sistem Gate Pass untuk mendigitalisasi pengajuan, persetujuan, verifikasi, dan pelacakan akses keluar-masuk barang dan personel di lingkungan perusahaan.</p>
+            <div class="p-tags">
+              <span class="tag">Gate Pass</span><span class="tag">Approval Flow</span>
+            </div>
+            <div class="p-actions">
+              <button class="p-link" data-lightbox="assets/img/panasonic-gatepass-detail.jpg" data-caption-i18n="proj.p4Caption" data-caption="Gate Pass — Verify &amp; Return, PT Panasonic Device Batam">
+                <span data-i18n="proj.viewDetail">Lihat detail</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="p-media">
+            <img src="assets/img/sumbermas-dms-prts.jpg" alt="Dashboard DMS dan PRTS untuk PT Sumber Mas Autorindo" data-i18n-alt="proj.p5ImgAlt">
+          </div>
+          <div class="p-body">
+            <p class="p-org">PT Sumber Mas Autorindo</p>
+            <h3 data-i18n="proj.p5Title">Kinerja harian &amp; manajemen masalah</h3>
+            <p data-i18n="proj.p5Text">Kombinasi DMS dan PRTS untuk memantau kinerja operasional harian dan mengelola penyelesaian masalah lintas departemen secara terstruktur.</p>
+            <div class="p-tags">
+              <span class="tag">DMS</span><span class="tag">PRTS</span>
+            </div>
+            <div class="p-actions">
+              <button class="p-link" data-lightbox="assets/img/sumbermas-prts-detail.jpg" data-caption-i18n="proj.p5Caption" data-caption="PRTS — Issue Dashboard, PT Sumber Mas Autorindo">
+                <span data-i18n="proj.viewDetail">Lihat detail</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPLORATION ============ -->
+  <section id="exploration">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <p class="section-num">04</p>
+          <h2 data-i18n="explore.title">Eksplorasi desain</h2>
+        </div>
+        <p class="section-lede" data-i18n="explore.lede">Di luar proyek enterprise, saya rutin membuat eksplorasi UI dan berbagi proses desain.</p>
+      </div>
+
+      <div class="explore-grid reveal">
+        <a class="explore-card" href="https://dribbble.com/muhazmyikh" target="_blank" rel="noopener">
+          <span class="explore-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3.5 9.5c2.5 1.2 6 2 8.5 2s6-.8 8.5-2M4.2 16c2-.7 5.2-1.2 7.8-1.2s5.8.5 7.8 1.2M11 3.2c1.6 3.2 2.6 6.6 2.6 8.8s-1 5.6-2.6 8.8"/></svg></span>
+          <h3 data-i18n="explore.dribbbleTitle">Studi kasus &amp; konsep di Dribbble</h3>
+          <p data-i18n="explore.dribbbleText">Kumpulan eksplorasi dashboard, mobile app, dan latihan visual bebas di luar pekerjaan klien.</p>
+          <span class="p-link"><span data-i18n="explore.viewProfile">Lihat profil Dribbble</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12h14M13 6l6 6-6 6"/></svg>
+          </span>
+        </a>
+
+        <a class="explore-card" href="https://instagram.com/azmydesain_uiux" target="_blank" rel="noopener">
+          <span class="explore-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor"/></svg></span>
+          <h3 data-i18n="explore.igTitle">Proses desain di Instagram</h3>
+          <p data-i18n="explore.igText">Cuplikan proses kerja, riset, dan behind-the-scenes dari proyek yang sedang dikerjakan.</p>
+          <span class="p-link"><span data-i18n="explore.viewIg">Lihat Instagram</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12h14M13 6l6 6-6 6"/></svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section id="skills">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <p class="section-num">05</p>
+          <h2 data-i18n="skills.title">Keahlian</h2>
+        </div>
+      </div>
+
+      <div class="skills-grid reveal">
+        <div class="skill-group">
+          <h3 data-i18n="skills.group1">Spesialisasi</h3>
+          <div class="skill-tags">
+            <span class="tag" data-i18n="skills.s1">User Experience</span>
+            <span class="tag" data-i18n="skills.s2">Web UI Design</span>
+            <span class="tag" data-i18n="skills.s3">Mobile UI Design</span>
+            <span class="tag" data-i18n="skills.s4">Wireframing</span>
+            <span class="tag" data-i18n="skills.s5">Prototyping</span>
+            <span class="tag" data-i18n="skills.s6">Design System</span>
+            <span class="tag" data-i18n="skills.s7">Riset Pengguna</span>
+            <span class="tag" data-i18n="skills.s8">Kolaborasi lintas fungsi</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3 data-i18n="skills.group2">Tools</h3>
+          <div class="skill-tags">
+            <span class="tag">Figma</span>
+            <span class="tag">Miro</span>
+            <span class="tag" data-i18n="skills.t1">HTML &amp; CSS</span>
+            <span class="tag" data-i18n="skills.t2">Atomic Design</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="edu-grid" style="margin-top:64px;">
+        <div class="reveal">
+          <div class="edu-main">
+            <h3 data-i18n="edu.uniName">Universitas Teknologi Yogyakarta</h3>
+            <span class="edu-period" data-i18n="edu.uniProgram">S1 Informatika · 2016 — 2021</span>
+            <p data-i18n="edu.uniText">Menyelesaikan pendidikan sarjana Informatika sebagai dasar teknis dalam memahami sistem dan proses pengembangan produk digital.</p>
+          </div>
+        </div>
+        <div class="reveal">
+          <div class="course">
+            <h4 data-i18n="edu.course1Title">Skilvul — UI/UX Design Mastery</h4>
+            <span class="edu-period" data-i18n="edu.course1Period">Sep — Okt 2021</span>
+            <p data-i18n="edu.course1Text">Studi kasus aplikasi mobile kelas online: Design Thinking, User Flow, Wireframe, UI Style Guide, hingga Prototype.</p>
+          </div>
+          <div class="course">
+            <h4 data-i18n="edu.course2Title">Sanbercode — UI/UX Design</h4>
+            <span class="edu-period" data-i18n="edu.course2Period">Agu — Nov 2021</span>
+            <p data-i18n="edu.course2Text">Riset pengguna, strategi dan ruang lingkup produk, arsitektur informasi, wireframe, dan mockup menggunakan Figma.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact-panel reveal">
+        <div>
+          <h2 data-i18n="contact.title">Mari berkolaborasi</h2>
+          <p data-i18n="contact.text">Terbuka untuk peran UI/UX Designer, proyek freelance, maupun diskusi seputar desain sistem enterprise. Hubungi saya lewat email, telepon, atau media sosial di samping.</p>
+          <div class="btn-row">
+            <a href="mailto:azmyikh98@gmail.com" class="btn btn-primary" data-i18n="contact.ctaEmail">Kirim email</a>
+            <a href="assets/cv/CV_Muhammad_Azmy_Ikhwan.pdf" class="btn btn-ghost" download data-i18n="contact.ctaCv">Unduh CV</a>
+          </div>
+        </div>
+
+        <div class="contact-list">
+          <div class="contact-row">
+            <span class="c-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18v12H3z"/><path d="M3 7l9 6 9-6"/></svg>Email</span>
+            <span class="c-value">azmyikh98@gmail.com</span>
+            <button class="copy-btn" data-copy="azmyikh98@gmail.com" data-i18n="contact.copy">Salin</button>
+          </div>
+          <div class="contact-row">
+            <span class="c-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M10 18h4"/></svg><span data-i18n="contact.phone">Telepon</span></span>
+            <span class="c-value">+62 821-3534-8966</span>
+            <button class="copy-btn" data-copy="082135348966" data-i18n="contact.copy">Salin</button>
+          </div>
+          <div class="contact-row">
+            <span class="c-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3.5 9.5c2.5 1.2 6 2 8.5 2s6-.8 8.5-2M4.2 16c2-.7 5.2-1.2 7.8-1.2s5.8.5 7.8 1.2M11 3.2c1.6 3.2 2.6 6.6 2.6 8.8s-1 5.6-2.6 8.8"/></svg>Dribbble</span>
+            <a class="c-value" href="https://dribbble.com/muhazmyikh" target="_blank" rel="noopener">muhazmyikh</a>
+          </div>
+          <div class="contact-row">
+            <span class="c-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg>Instagram</span>
+            <a class="c-value" href="https://instagram.com/azmydesain_uiux" target="_blank" rel="noopener">azmydesain_uiux</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p data-i18n="footer.credit">© <span id="year"></span> Muhammad Azmy Ikhwan. Dirancang &amp; dikode sendiri.</p>
+    <div class="footer-links">
+      <a href="https://dribbble.com/muhazmyikh" target="_blank" rel="noopener">Dribbble</a>
+      <a href="https://instagram.com/azmydesain_uiux" target="_blank" rel="noopener">Instagram</a>
+      <a href="mailto:azmyikh98@gmail.com">Email</a>
+    </div>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Tutup">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <figure>
+    <img src="" alt="" id="lightboxImg">
+    <figcaption id="lightboxCaption"></figcaption>
+  </figure>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
