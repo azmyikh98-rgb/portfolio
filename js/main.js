@@ -17,7 +17,7 @@
       "nav.projects":"Proyek","nav.exploration":"Eksplorasi","nav.skills":"Keahlian","nav.contact":"Kontak",
 
       "hero.headline":"Muhammad Azmy Ikhwan",
-      "hero.lede":"4+ tahun merancang dashboard, wireframe, dan prototype untuk sistem manufaktur, maintenance, dan operasional harian di skala enterprise — mulai dari riset kebutuhan pengguna sampai desain yang siap dibangun tim developer.",
+      "hero.lede":"4+ tahun menciptakan solusi digital melalui UI/UX design, dari eksplorasi kebutuhan pengguna hingga menghasilkan desain yang fungsional dan siap dikembangkan.",
       "hero.ctaProjects":"Lihat proyek",
       "hero.ctaContact":"Kontak sekarang",
       "hero.locationVal":"Malang, Indonesia",
@@ -120,7 +120,7 @@
       "nav.projects":"Projects","nav.exploration":"Exploration","nav.skills":"Skills","nav.contact":"Contact",
 
       "hero.headline":"Muhammad Azmy Ikhwan",
-      "hero.lede":"4+ years designing dashboards, wireframes, and prototypes for manufacturing, maintenance, and daily-operations systems at enterprise scale — from user research to build-ready design.",
+      "hero.lede":"4+ years creating digital solutions through UI/UX design, from exploring user needs to delivering functional, build-ready designs.",
       "hero.ctaProjects":"View projects",
       "hero.ctaContact":"Contact now",
       "hero.locationVal":"Malang, Indonesia",
