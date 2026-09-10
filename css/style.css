@@ -484,35 +484,43 @@ a.contact-row:hover{border-color:var(--accent); transform:translateY(-2px);}
 .footer-links a:hover{color:var(--accent);}
 
 /* -----------------------------------------------------------
-   Lightbox / Project detail modal
+   Project detail page
    ----------------------------------------------------------- */
-.lightbox{
-  position:fixed; inset:0; background:rgba(10,10,12,.86);
-  display:none; align-items:center; justify-content:center; padding:32px;
-  z-index:300;
+.project-hero{padding:48px 0 56px; border-bottom:1px solid var(--line);}
+.back-link{
+  display:inline-flex; align-items:center; gap:8px; font-size:.9rem; color:var(--ink-soft);
+  margin-bottom:28px; transition:color .2s var(--ease);
 }
-.lightbox.is-open{display:flex;}
-.lightbox-close{
-  position:absolute; top:24px; right:28px; width:42px; height:42px; border-radius:50%;
-  background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.2); color:#fff;
-  display:flex; align-items:center; justify-content:center; z-index:2;
-}
-.lightbox-close svg{width:18px; height:18px;}
+.back-link:hover{color:var(--accent);}
+.back-link svg{width:15px; height:15px;}
+.pd-org{font-family:var(--font-mono); font-size:.78rem; color:var(--accent); font-weight:600; margin-bottom:14px;}
+.project-hero h1{font-size:clamp(1.8rem, 3.6vw, 2.6rem); font-weight:600; line-height:1.15; margin-bottom:20px; max-width:20ch;}
+.project-hero .pd-desc{color:var(--ink-soft); font-size:1.04rem; max-width:70ch; margin-bottom:24px;}
+.pd-tags{display:flex; flex-wrap:wrap; gap:8px;}
 
-.pm-panel{
-  background:var(--panel); border-radius:var(--radius-l); overflow:hidden;
-  max-width:min(980px, 92vw); max-height:88vh; width:100%;
-  display:grid; grid-template-columns:1.1fr .9fr;
+.module-section{padding:64px 0; border-bottom:1px solid var(--line);}
+.module-head{margin-bottom:28px; max-width:760px;}
+.module-head .module-num{font-family:var(--font-mono); color:var(--accent); font-size:.78rem; font-weight:600; display:block; margin-bottom:10px;}
+.module-head h2{font-size:1.4rem; font-weight:600; margin-bottom:12px;}
+.module-head p{color:var(--ink-soft); font-size:.98rem;}
+
+.carousel{position:relative; border-radius:var(--radius-m); overflow:hidden; border:1px solid var(--line); background:var(--panel-2);}
+.carousel-track{display:flex; transition:transform .4s var(--ease);}
+.carousel-track img{width:100%; flex-shrink:0; display:block; object-fit:cover; object-position:top;}
+.carousel-btn{
+  position:absolute; top:50%; transform:translateY(-50%); width:40px; height:40px; border-radius:50%;
+  background:var(--panel); border:1px solid var(--line); display:flex; align-items:center; justify-content:center;
+  color:var(--ink); transition:border-color .2s var(--ease), background .2s var(--ease);
 }
-.pm-media{
-  background:var(--panel-2); overflow:hidden; max-height:88vh;
-  display:flex; align-items:center; justify-content:center;
-}
-.pm-media img{width:100%; height:100%; object-fit:cover; display:block;}
-.pm-body{padding:32px; overflow-y:auto; max-height:88vh;}
-.pm-body #pmTitle{font-family:var(--font-display); font-size:1.5rem; font-weight:600; margin:8px 0 16px;}
-.pm-body #pmText{color:var(--ink-soft); font-size:.98rem; margin-bottom:20px;}
-.pm-body .p-tags{display:flex; flex-wrap:wrap; gap:8px;}
+.carousel-btn:hover{border-color:var(--accent);}
+.carousel-btn svg{width:17px; height:17px;}
+.carousel-btn.prev{left:14px;}
+.carousel-btn.next{right:14px;}
+.carousel-dots{display:flex; justify-content:center; gap:8px; margin-top:16px;}
+.carousel-dot{width:7px; height:7px; border-radius:50%; background:var(--line); border:none; padding:0; transition:width .2s var(--ease), background .2s var(--ease);}
+.carousel-dot.active{background:var(--accent); width:20px; border-radius:4px;}
+
+.project-nav-foot{padding:56px 0; display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap;}
 
 /* -----------------------------------------------------------
    Responsive
@@ -523,8 +531,6 @@ a.contact-row:hover{border-color:var(--accent); transform:translateY(-2px);}
   .about-grid, .edu-grid{grid-template-columns:1fr; gap:36px;}
   .skills-grid{grid-template-columns:1fr; gap:32px;}
   .project-grid{grid-template-columns:repeat(2, 1fr);}
-  .pm-panel{grid-template-columns:1fr; max-height:90vh;}
-  .pm-media{max-height:38vh;}
   .contact-panel{grid-template-columns:1fr; padding:40px 28px;}
   .explore-grid{grid-template-columns:1fr;}
 }

@@ -107,6 +107,25 @@
       "contact.ctaEmail":"Kirim email",
       "contact.ctaCv":"Unduh CV",
 
+      "pd.backToProjects":"Kembali ke proyek",
+      "pd.moreProjects":"Lihat proyek lainnya",
+      "pd.electraMesTitle":"MES — Manufacturing Execution System",
+      "pd.electraMesDesc":"MES dirancang untuk memantau proses produksi secara real-time di lini perakitan motor listrik ALVA — mulai dari OEE, target produksi, ketersediaan mesin, hingga performa dan kualitas per stasiun kerja. Operator dan supervisor dapat memantau timeline produksi dan membandingkan target dengan hasil aktual per jam.",
+      "pd.electraPrtsTitle":"PRTS — Problem Resolution Tracking System",
+      "pd.electraPrtsDesc":"PRTS membantu tim mencatat, mengelompokkan, dan menindaklanjuti setiap masalah produksi yang ditemukan di lini — dari root cause analysis hingga corrective action — lengkap dengan ringkasan performa penyelesaian masalah (7 Diamond) dan analisis tren isu per kategori.",
+      "pd.electraTraceTitle":"Traceability System",
+      "pd.electraTraceDesc":"Sistem traceability melacak status material dan produk jadi di setiap tahap produksi, memetakan alokasi material per varian produk, serta memberikan gambaran menyeluruh atas seluruh unit yang sedang diproses maupun telah selesai.",
+      "pd.paragonCmmsTitle":"CMMS — Computerized Maintenance Management System",
+      "pd.paragonCmmsDesc":"CMMS memusatkan pengelolaan work order pemeliharaan — mulai dari pengajuan, persetujuan, hingga pemantauan status pekerjaan yang berisiko, tertunda, maupun selesai. Approval Center memudahkan supervisor menyetujui permintaan cuti maupun pekerjaan maintenance dalam satu tampilan.",
+      "pd.zekindoDmsTitle":"DMS — Daily Management System",
+      "pd.zekindoDmsDesc":"Daily Management System menampilkan ringkasan sales order, rencana pengiriman, dan transfer inventaris harian dalam satu dashboard, sehingga tim operasional dapat memantau status pesanan dan menyiapkan rencana pengiriman tanpa berpindah aplikasi.",
+      "pd.panasonicGpTitle":"Gate Pass Management System",
+      "pd.panasonicGpDesc":"Sistem Gate Pass mendigitalisasi proses pengajuan hingga verifikasi akses keluar-masuk barang dan personel — termasuk pemindaian kode QR di titik keamanan dan pencatatan pengembalian barang — untuk menggantikan proses manual berbasis kertas.",
+      "pd.sumbermasDmsTitle":"DMS — Daily Management System",
+      "pd.sumbermasDmsDesc":"DMS di PT Sumber Mas Autorindo memberikan ringkasan kinerja penjualan harian — total revenue, jumlah sales order, dan status pesanan — agar tim dapat mengevaluasi capaian operasional secara cepat dan terstruktur.",
+      "pd.sumbermasPrtsTitle":"PRTS — Problem Resolution Tracking System",
+      "pd.sumbermasPrtsDesc":"PRTS mengelola pelaporan dan penyelesaian isu operasional lintas departemen, lengkap dengan status tiket, tingkat urgensi, dan analisis jumlah isu per departemen untuk membantu prioritas tindak lanjut.",
+
       "footer.credit":"© <span id=\"year\"></span> Muhammad Azmy Ikhwan."
     },
 
@@ -208,6 +227,25 @@
       "contact.ctaEmail":"Send an email",
       "contact.ctaCv":"Download CV",
 
+      "pd.backToProjects":"Back to projects",
+      "pd.moreProjects":"View more projects",
+      "pd.electraMesTitle":"MES — Manufacturing Execution System",
+      "pd.electraMesDesc":"The MES monitors ALVA's electric-motorcycle assembly line in real time — tracking OEE, production targets, machine availability, and per-station performance and quality. Operators and supervisors can follow the production timeline and compare hourly targets against actual output.",
+      "pd.electraPrtsTitle":"PRTS — Problem Resolution Tracking System",
+      "pd.electraPrtsDesc":"PRTS lets the team log, categorize, and follow up on every production issue found on the line — from root-cause analysis to corrective action — complete with a resolution-performance summary (7 Diamond) and issue-trend analysis by category.",
+      "pd.electraTraceTitle":"Traceability System",
+      "pd.electraTraceDesc":"The traceability system tracks material and finished-product status at every production stage, maps material allocation per product variant, and gives a complete overview of units in progress and completed.",
+      "pd.paragonCmmsTitle":"CMMS — Computerized Maintenance Management System",
+      "pd.paragonCmmsDesc":"The CMMS centralizes maintenance work-order management — from submission and approval to tracking at-risk, overdue, and completed work. The Approval Center lets supervisors approve leave and maintenance requests from a single view.",
+      "pd.zekindoDmsTitle":"DMS — Daily Management System",
+      "pd.zekindoDmsDesc":"The Daily Management System shows a daily summary of sales orders, delivery plans, and inventory transfers in one dashboard, so the operations team can track order status and prepare delivery plans without switching apps.",
+      "pd.panasonicGpTitle":"Gate Pass Management System",
+      "pd.panasonicGpDesc":"The Gate Pass system digitizes the process from submission to verification of goods and personnel access — including QR-code scanning at security checkpoints and return logging — replacing the previous paper-based process.",
+      "pd.sumbermasDmsTitle":"DMS — Daily Management System",
+      "pd.sumbermasDmsDesc":"The DMS at PT Sumber Mas Autorindo provides a daily sales-performance summary — total revenue, order volume, and order status — so the team can evaluate operational results quickly and consistently.",
+      "pd.sumbermasPrtsTitle":"PRTS — Problem Resolution Tracking System",
+      "pd.sumbermasPrtsDesc":"PRTS manages cross-department issue reporting and resolution, complete with ticket status, severity, and issue-count analysis per department to help prioritize follow-up action.",
+
       "footer.credit":"© <span id=\"year\"></span> Muhammad Azmy Ikhwan."
     }
   };
@@ -246,10 +284,6 @@
     stampYear();
     localStorage.setItem("azmy-lang", lang);
     state.lang = lang;
-
-    if(typeof lightbox !== "undefined" && lightbox.classList.contains("is-open") && lastFocusedCard){
-      openProjectModal(lastFocusedCard);
-    }
   }
 
   document.getElementById("langId").addEventListener("click", function(){ applyLanguage("id"); });
@@ -296,7 +330,11 @@
      --------------------------------------------------------- */
   const navLinks = Array.from(mainNav.querySelectorAll("a"));
   const sections = navLinks
-    .map(function(a){ return document.querySelector(a.getAttribute("href")); })
+    .map(function(a){
+      const href = a.getAttribute("href");
+      if(!href || !href.startsWith("#")) return null;
+      try{ return document.querySelector(href); } catch(e){ return null; }
+    })
     .filter(Boolean);
 
   const navObserver = new IntersectionObserver(function(entries){
@@ -355,48 +393,25 @@
   });
 
   /* ---------------------------------------------------------
-     7. Project detail modal (click any project card)
+     7. Module image carousels (project detail pages)
      --------------------------------------------------------- */
-  const lightbox = document.getElementById("lightbox");
-  const lightboxClose = document.getElementById("lightboxClose");
-  const pmImg1 = document.getElementById("pmImg1");
-  const pmOrg = document.getElementById("pmOrg");
-  const pmTitle = document.getElementById("pmTitle");
-  const pmText = document.getElementById("pmText");
-  const pmTags = document.getElementById("pmTags");
-  let lastFocusedCard = null;
-
-  function openProjectModal(card){
-    const dict = translations[state.lang] || translations.id;
-    const org = card.getAttribute("data-org");
-    const title = dict[card.getAttribute("data-title-key")] || "";
-    const text = dict[card.getAttribute("data-text-key")] || "";
-    const tags = (card.getAttribute("data-tags") || "").split(",").filter(Boolean);
-    const detailImg = card.getAttribute("data-detail-img");
-    const cardImg = card.querySelector("img");
-
-    pmOrg.textContent = org;
-    pmTitle.textContent = title;
-    pmText.textContent = text;
-    pmImg1.src = detailImg;
-    pmImg1.alt = cardImg ? cardImg.alt : title;
-    pmTags.innerHTML = tags.map(function(t){ return '<span class="tag">' + t + '</span>'; }).join("");
-
-    lastFocusedCard = card;
-    lightbox.classList.add("is-open");
-    lightboxClose.focus();
-  }
-  function closeLightbox(){
-    lightbox.classList.remove("is-open");
-    pmImg1.src = "";
-    if(lastFocusedCard) lastFocusedCard.focus();
-  }
-  document.querySelectorAll(".project-card").forEach(function(card){
-    card.addEventListener("click", function(){ openProjectModal(card); });
+  document.querySelectorAll("[data-carousel]").forEach(function(car){
+    const track = car.querySelector(".carousel-track");
+    if(!track) return;
+    const slides = Array.from(track.children);
+    if(slides.length <= 1) return;
+    const prevBtn = car.querySelector(".carousel-btn.prev");
+    const nextBtn = car.querySelector(".carousel-btn.next");
+    const dots = Array.from(car.querySelectorAll(".carousel-dot"));
+    let idx = 0;
+    function update(){
+      track.style.transform = "translateX(-" + (idx * 100) + "%)";
+      dots.forEach(function(d, i){ d.classList.toggle("active", i === idx); });
+    }
+    if(prevBtn) prevBtn.addEventListener("click", function(){ idx = (idx - 1 + slides.length) % slides.length; update(); });
+    if(nextBtn) nextBtn.addEventListener("click", function(){ idx = (idx + 1) % slides.length; update(); });
+    dots.forEach(function(d, i){ d.addEventListener("click", function(){ idx = i; update(); }); });
   });
-  lightboxClose.addEventListener("click", closeLightbox);
-  lightbox.addEventListener("click", function(e){ if(e.target === lightbox) closeLightbox(); });
-  document.addEventListener("keydown", function(e){ if(e.key === "Escape") closeLightbox(); });
 
   /* ---------------------------------------------------------
      9. Footer year
