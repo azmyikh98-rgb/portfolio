@@ -16,7 +16,7 @@
       "nav.home":"Beranda","nav.about":"Tentang","nav.experience":"Pengalaman",
       "nav.projects":"Proyek","nav.exploration":"Eksplorasi","nav.skills":"Keahlian","nav.contact":"Kontak",
 
-      "hero.headline":"Desain antarmuka yang membuat sistem rumit terasa sederhana.",
+      "hero.headline":"Muhammad Azmy Ikhwan",
       "hero.lede":"4+ tahun merancang dashboard, wireframe, dan prototype untuk sistem manufaktur, maintenance, dan operasional harian di skala enterprise — mulai dari riset kebutuhan pengguna sampai desain yang siap dibangun tim developer.",
       "hero.ctaProjects":"Lihat proyek",
       "hero.ctaContact":"Kontak sekarang",
@@ -29,7 +29,7 @@
 
       "about.title":"Tentang saya",
       "about.p1":"Saya UI/UX Designer dengan lebih dari 4 tahun pengalaman merancang antarmuka untuk sistem enterprise — mulai dari lini produksi manufaktur, manajemen perawatan aset, hingga akses keluar-masuk perusahaan. Sebagian besar pekerjaan saya berputar di satu masalah yang sama: mengubah proses operasional yang rumit menjadi antarmuka yang bisa langsung dipahami oleh operator, teknisi, dan manajer di lapangan.",
-      "about.p2":"Saya bekerja dekat dengan Business Analyst dan tim developer sejak tahap riset kebutuhan, bukan hanya di tahap visual. Setiap wireframe dan prototype dirancang agar mudah dieksekusi oleh tim engineering tanpa banyak revisi bolak-balik — dan situs ini sendiri saya bangun dari nol untuk membuktikannya.",
+      "about.p2":"Saya bekerja dekat dengan Business Analyst dan tim developer sejak tahap riset kebutuhan, bukan hanya di tahap visual. Setiap wireframe dan prototype dirancang agar mudah dieksekusi oleh tim engineering tanpa banyak revisi bolak-balik.",
       "about.p1Title":"Riset sebelum desain",
       "about.p1Text":"Setiap alur dimulai dari kebutuhan pengguna dan proses bisnis nyata, bukan asumsi.",
       "about.p2Title":"Desain siap-bangun",
@@ -119,7 +119,7 @@
       "nav.home":"Home","nav.about":"About","nav.experience":"Experience",
       "nav.projects":"Projects","nav.exploration":"Exploration","nav.skills":"Skills","nav.contact":"Contact",
 
-      "hero.headline":"Interfaces that make complex systems feel simple.",
+      "hero.headline":"Muhammad Azmy Ikhwan",
       "hero.lede":"4+ years designing dashboards, wireframes, and prototypes for manufacturing, maintenance, and daily-operations systems at enterprise scale — from user research to build-ready design.",
       "hero.ctaProjects":"View projects",
       "hero.ctaContact":"Contact now",
@@ -132,7 +132,7 @@
 
       "about.title":"About me",
       "about.p1":"I'm a UI/UX Designer with 4+ years of experience designing interfaces for enterprise systems — from manufacturing production lines and asset maintenance to company access control. Most of my work circles one problem: turning complex operational processes into interfaces that operators, technicians, and floor managers can understand at a glance.",
-      "about.p2":"I work closely with Business Analysts and developers from the research stage onward, not just at the visual stage. Every wireframe and prototype is built so engineering teams can implement it without endless back-and-forth revisions — and I built this site itself from scratch to prove it.",
+      "about.p2":"I work closely with Business Analysts and developers from the research stage onward, not just at the visual stage. Every wireframe and prototype is built so engineering teams can implement it without endless back-and-forth revisions.",
       "about.p1Title":"Research before design",
       "about.p1Text":"Every flow starts from real user needs and business processes, not assumptions.",
       "about.p2Title":"Build-ready design",
