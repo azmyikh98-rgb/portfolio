@@ -86,9 +86,8 @@
       "skills.group1":"Spesialisasi",
       "skills.s1":"User Experience","skills.s2":"Web UI Design","skills.s3":"Mobile UI Design",
       "skills.s4":"Wireframing","skills.s5":"Prototyping","skills.s6":"Design System",
-      "skills.s7":"Riset Pengguna","skills.s8":"Kolaborasi lintas fungsi",
+      "skills.s7":"Riset Pengguna",
       "skills.group2":"Tools",
-      "skills.t1":"HTML & CSS","skills.t2":"Atomic Design",
 
       "edu.title":"Pendidikan",
       "edu.uniName":"Universitas Teknologi Yogyakarta",
@@ -189,9 +188,8 @@
       "skills.group1":"Specialization",
       "skills.s1":"User Experience","skills.s2":"Web UI Design","skills.s3":"Mobile UI Design",
       "skills.s4":"Wireframing","skills.s5":"Prototyping","skills.s6":"Design System",
-      "skills.s7":"User Research","skills.s8":"Cross-functional collaboration",
+      "skills.s7":"User Research",
       "skills.group2":"Tools",
-      "skills.t1":"HTML & CSS","skills.t2":"Atomic Design",
 
       "edu.title":"Education",
       "edu.uniName":"Yogyakarta University of Technology",
