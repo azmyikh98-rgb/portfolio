@@ -394,6 +394,13 @@ section + section{border-top:1px solid var(--line);}
 .course .edu-period{font-family:var(--font-mono); font-size:.72rem; color:var(--ink-soft); margin-bottom:8px; display:block;}
 .course p{color:var(--ink-soft); font-size:.9rem;}
 
+#courses .edu-grid .course{
+  border:1px solid var(--line); border-radius:var(--radius-m);
+  padding:24px; background:var(--panel);
+}
+#courses .edu-grid .course:last-child{border:1px solid var(--line); padding-bottom:24px;}
+#courses .edu-grid .course:first-child{padding-top:24px;}
+
 /* -----------------------------------------------------------
    Contact
    ----------------------------------------------------------- */

@@ -97,9 +97,11 @@
       "skills.group2":"Tools",
       "skills.t1":"HTML & CSS","skills.t2":"Atomic Design",
 
+      "edu.title":"Pendidikan",
       "edu.uniName":"Universitas Teknologi Yogyakarta",
       "edu.uniProgram":"S1 Informatika · 2016 — 2021",
       "edu.uniText":"Menyelesaikan pendidikan sarjana Informatika sebagai dasar teknis dalam memahami sistem dan proses pengembangan produk digital.",
+      "courses.title":"Kursus",
       "edu.course1Title":"Skilvul — UI/UX Design Mastery",
       "edu.course1Period":"Sep — Okt 2021",
       "edu.course1Text":"Studi kasus aplikasi mobile kelas online: Design Thinking, User Flow, Wireframe, UI Style Guide, hingga Prototype.",
@@ -205,9 +207,11 @@
       "skills.group2":"Tools",
       "skills.t1":"HTML & CSS","skills.t2":"Atomic Design",
 
+      "edu.title":"Education",
       "edu.uniName":"Yogyakarta University of Technology",
       "edu.uniProgram":"B.S. Informatics · 2016 — 2021",
       "edu.uniText":"Completed a bachelor's degree in Informatics, forming a technical foundation for understanding systems and digital product development.",
+      "courses.title":"Courses",
       "edu.course1Title":"Skilvul — UI/UX Design Mastery",
       "edu.course1Period":"Sep — Oct 2021",
       "edu.course1Text":"An online-class mobile app case study covering Design Thinking, User Flow, Wireframe, UI Style Guide, and Prototype.",
