@@ -345,7 +345,6 @@
   const lightbox = document.getElementById("lightbox");
   const lightboxClose = document.getElementById("lightboxClose");
   const pmImg1 = document.getElementById("pmImg1");
-  const pmImg2 = document.getElementById("pmImg2");
   const pmOrg = document.getElementById("pmOrg");
   const pmTitle = document.getElementById("pmTitle");
   const pmText = document.getElementById("pmText");
@@ -358,17 +357,14 @@
     const title = dict[card.getAttribute("data-title-key")] || "";
     const text = dict[card.getAttribute("data-text-key")] || "";
     const tags = (card.getAttribute("data-tags") || "").split(",").filter(Boolean);
-    const img = card.getAttribute("data-img");
     const detailImg = card.getAttribute("data-detail-img");
     const cardImg = card.querySelector("img");
 
     pmOrg.textContent = org;
     pmTitle.textContent = title;
     pmText.textContent = text;
-    pmImg1.src = img;
+    pmImg1.src = detailImg;
     pmImg1.alt = cardImg ? cardImg.alt : title;
-    pmImg2.src = detailImg;
-    pmImg2.alt = title;
     pmTags.innerHTML = tags.map(function(t){ return '<span class="tag">' + t + '</span>'; }).join("");
 
     lastFocusedCard = card;
@@ -377,7 +373,7 @@
   }
   function closeLightbox(){
     lightbox.classList.remove("is-open");
-    pmImg1.src = ""; pmImg2.src = "";
+    pmImg1.src = "";
     if(lastFocusedCard) lastFocusedCard.focus();
   }
   document.querySelectorAll(".project-card").forEach(function(card){
