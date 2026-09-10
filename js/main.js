@@ -326,11 +326,10 @@
   document.querySelectorAll(".reveal").forEach(function(el){ revealObserver.observe(el); });
 
   /* ---------------------------------------------------------
-     6b. Scroll progress bar + back-to-top + subtle hero parallax
+     6b. Scroll progress bar + back-to-top
      --------------------------------------------------------- */
   const scrollProgress = document.getElementById("scrollProgress");
   const backToTop = document.getElementById("backToTop");
-  const photoCard = document.querySelector(".photo-card");
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   let ticking = false;
 
@@ -341,11 +340,6 @@
     scrollProgress.style.width = pct + "%";
 
     backToTop.classList.toggle("is-visible", scrollY > window.innerHeight * 0.7);
-
-    if(photoCard && !prefersReducedMotion){
-      const offset = Math.min(scrollY * 0.08, 26);
-      photoCard.style.transform = "translateY(" + offset + "px)";
-    }
     ticking = false;
   }
   window.addEventListener("scroll", function(){
