@@ -12,6 +12,7 @@
     id: {
       "meta.desc":"Portofolio Muhammad Azmy Ikhwan, UI/UX Designer yang merancang dashboard dan sistem enterprise untuk manufaktur, maintenance, dan operasional harian.",
       "a11y.skip":"Langsung ke isi",
+      "a11y.backToTop":"Kembali ke atas",
 
       "nav.home":"Beranda","nav.about":"Tentang","nav.experience":"Pengalaman",
       "nav.projects":"Proyek","nav.exploration":"Eksplorasi","nav.skills":"Keahlian","nav.contact":"Kontak",
@@ -114,6 +115,7 @@
     en: {
       "meta.desc":"Portfolio of Muhammad Azmy Ikhwan, a UI/UX Designer who builds dashboards and enterprise systems for manufacturing, maintenance, and daily operations.",
       "a11y.skip":"Skip to content",
+      "a11y.backToTop":"Back to top",
 
       "nav.home":"Home","nav.about":"About","nav.experience":"Experience",
       "nav.projects":"Projects","nav.exploration":"Exploration","nav.skills":"Skills","nav.contact":"Contact",
@@ -233,6 +235,10 @@
       const key = el.getAttribute("data-i18n-alt");
       if(dict[key] !== undefined){ el.setAttribute("alt", dict[key]); }
     });
+    document.querySelectorAll("[data-i18n-aria]").forEach(function(el){
+      const key = el.getAttribute("data-i18n-aria");
+      if(dict[key] !== undefined){ el.setAttribute("aria-label", dict[key]); }
+    });
 
     document.getElementById("langId").classList.toggle("active", lang === "id");
     document.getElementById("langEn").classList.toggle("active", lang === "en");
@@ -322,6 +328,41 @@
     });
   }, { threshold: 0.12 });
   document.querySelectorAll(".reveal").forEach(function(el){ revealObserver.observe(el); });
+
+  /* ---------------------------------------------------------
+     6b. Scroll progress bar + back-to-top + subtle hero parallax
+     --------------------------------------------------------- */
+  const scrollProgress = document.getElementById("scrollProgress");
+  const backToTop = document.getElementById("backToTop");
+  const photoCard = document.querySelector(".photo-card");
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let ticking = false;
+
+  function onScroll(){
+    const scrollY = window.scrollY || window.pageYOffset;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (scrollY / docHeight) * 100 : 0;
+    scrollProgress.style.width = pct + "%";
+
+    backToTop.classList.toggle("is-visible", scrollY > window.innerHeight * 0.7);
+
+    if(photoCard && !prefersReducedMotion){
+      const offset = Math.min(scrollY * 0.08, 26);
+      photoCard.style.transform = "translateY(" + offset + "px)";
+    }
+    ticking = false;
+  }
+  window.addEventListener("scroll", function(){
+    if(!ticking){
+      requestAnimationFrame(onScroll);
+      ticking = true;
+    }
+  }, { passive: true });
+  onScroll();
+
+  backToTop.addEventListener("click", function(){
+    window.scrollTo({ top: 0, behavior: prefersReducedMotion ? "auto" : "smooth" });
+  });
 
   /* ---------------------------------------------------------
      7. Project detail modal (click any project card)
