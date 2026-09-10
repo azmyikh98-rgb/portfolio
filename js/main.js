@@ -27,10 +27,6 @@
       "hero.stat3":"Perusahaan & klien",
       "hero.stat4":"Sektor industri",
       "hero.photoAlt":"Foto Muhammad Azmy Ikhwan",
-      "hero.widgetTitle":"LINE DETAIL — REALTIME",
-      "hero.widgetAvail":"Availability",
-      "hero.widgetQuality":"Quality",
-      "hero.widgetPerf":"Performance",
 
       "about.title":"Tentang saya",
       "about.p1":"Saya UI/UX Designer dengan lebih dari 4 tahun pengalaman merancang antarmuka untuk sistem enterprise — mulai dari lini produksi manufaktur, manajemen perawatan aset, hingga akses keluar-masuk perusahaan. Sebagian besar pekerjaan saya berputar di satu masalah yang sama: mengubah proses operasional yang rumit menjadi antarmuka yang bisa langsung dipahami oleh operator, teknisi, dan manajer di lapangan.",
@@ -117,9 +113,8 @@
       "contact.ctaCv":"Unduh CV",
       "contact.copy":"Salin",
       "contact.copied":"Tersalin",
-      "contact.phone":"Telepon",
 
-      "footer.credit":"© <span id=\"year\"></span> Muhammad Azmy Ikhwan. Dirancang & dikode sendiri."
+      "footer.credit":"© <span id=\"year\"></span> Muhammad Azmy Ikhwan."
     },
 
     en: {
@@ -140,10 +135,6 @@
       "hero.stat3":"Companies & clients",
       "hero.stat4":"Industry sectors",
       "hero.photoAlt":"Photo of Muhammad Azmy Ikhwan",
-      "hero.widgetTitle":"LINE DETAIL — REALTIME",
-      "hero.widgetAvail":"Availability",
-      "hero.widgetQuality":"Quality",
-      "hero.widgetPerf":"Performance",
 
       "about.title":"About me",
       "about.p1":"I'm a UI/UX Designer with 4+ years of experience designing interfaces for enterprise systems — from manufacturing production lines and asset maintenance to company access control. Most of my work circles one problem: turning complex operational processes into interfaces that operators, technicians, and floor managers can understand at a glance.",
@@ -230,9 +221,8 @@
       "contact.ctaCv":"Download CV",
       "contact.copy":"Copy",
       "contact.copied":"Copied",
-      "contact.phone":"Phone",
 
-      "footer.credit":"© <span id=\"year\"></span> Muhammad Azmy Ikhwan. Designed & coded by himself."
+      "footer.credit":"© <span id=\"year\"></span> Muhammad Azmy Ikhwan."
     }
   };
 
@@ -342,30 +332,7 @@
   document.querySelectorAll(".reveal").forEach(function(el){ revealObserver.observe(el); });
 
   /* ---------------------------------------------------------
-     7. Hero status widget: live clock + animated bars
-     --------------------------------------------------------- */
-  const clockEl = document.getElementById("clock");
-  function tickClock(){
-    const now = new Date();
-    const pad = function(n){ return String(n).padStart(2,"0"); };
-    clockEl.textContent = pad(now.getHours()) + ":" + pad(now.getMinutes()) + ":" + pad(now.getSeconds());
-  }
-  tickClock();
-  setInterval(tickClock, 1000);
-
-  const statusWidget = document.getElementById("statusWidget");
-  const widgetObserver = new IntersectionObserver(function(entries){
-    entries.forEach(function(entry){
-      if(entry.isIntersecting){
-        statusWidget.classList.add("is-live");
-        widgetObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.4 });
-  widgetObserver.observe(statusWidget);
-
-  /* ---------------------------------------------------------
-     8. Lightbox for project detail screenshots
+     7. Lightbox for project detail screenshots
      --------------------------------------------------------- */
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightboxImg");
@@ -394,7 +361,7 @@
   document.addEventListener("keydown", function(e){ if(e.key === "Escape") closeLightbox(); });
 
   /* ---------------------------------------------------------
-     9. Copy-to-clipboard buttons (contact section)
+     8. Copy-to-clipboard buttons (contact section)
      --------------------------------------------------------- */
   document.querySelectorAll(".copy-btn").forEach(function(btn){
     const originalKey = "contact.copy";
@@ -411,7 +378,7 @@
   });
 
   /* ---------------------------------------------------------
-     10. Footer year
+     9. Footer year
      --------------------------------------------------------- */
   function stampYear(){
     const y = document.getElementById("year");
