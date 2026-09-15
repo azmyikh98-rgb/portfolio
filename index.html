@@ -912,10 +912,16 @@
   .contact-row{
     margin-top: 48px;
     display: flex;
-    gap: 32px;
+    align-items: center;
+    gap: 24px;
     flex-wrap: wrap;
     color: var(--muted);
     font-size: 14.5px;
+  }
+  .contact-row a{
+    display: flex;
+    align-items: center;
+    transition: color .2s ease;
   }
   .contact-row a:hover{ color: var(--text); }
 
@@ -1080,8 +1086,12 @@
   <div class="wrap">
     <h2><span data-i18n="contact.heading">Have a project in mind?</span><br><a href="mailto:azmyikh98@gmail.com" data-i18n="contact.cta">Let's talk →</a></h2>
     <div class="contact-row">
-      <a href="https://www.instagram.com/azmydesain_uiux?stkn=MWJlMXRla3g5eml6OQ==" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://dribbble.com/muhazmyikh" target="_blank" rel="noopener">Dribbble</a>
+      <a href="https://www.instagram.com/azmydesain_uiux?stkn=MWJlMXRla3g5eml6OQ==" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg>
+      </a>
+      <a href="https://dribbble.com/muhazmyikh" target="_blank" rel="noopener" aria-label="Dribbble">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72"/><path d="M19.13 5.09C15.22 9.14 10 10.44 2.25 10.94"/><path d="M21.75 12.84c-6.62-1.41-12.14-1-16.38.46"/></svg>
+      </a>
     </div>
   </div>
 </section>
