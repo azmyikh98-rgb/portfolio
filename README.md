@@ -1,88 +1,79 @@
-# Muhammad Azmy Ikhwan — Portfolio
+# Azmy Ikhwan — Portfolio Website
 
-Situs portofolio pribadi untuk **Muhammad Azmy Ikhwan**, UI/UX Designer.
-Dibangun sebagai HTML/CSS/JS statis murni — tanpa framework, tanpa proses
-build — supaya bisa langsung di-deploy ke GitHub Pages maupun Vercel.
+Portfolio single-page (HTML/CSS/JS murni, tanpa framework, tanpa build step) untuk Azmy Ikhwan, UI/UX Designer. Mendukung toggle bahasa ID/EN, daftar project yang bisa di-expand, dan modal detail module dengan galeri gambar.
 
-## Fitur
-
-- Mode terang & gelap (tersimpan di `localStorage`, mengikuti preferensi
-  sistem saat pertama kali dibuka).
-- Dwibahasa Indonesia / English, bisa diganti tanpa reload halaman.
-- Studi kasus proyek nyata (MES, CMMS, DMS, PRTS, Gate Pass) lengkap
-  dengan screenshot asli dari portofolio, dibuka lewat lightbox.
-- Widget "status sistem" di hero yang meniru gaya dashboard asli —
-  lengkap dengan jam realtime.
-- Navigasi mobile, aksesibilitas dasar (skip link, fokus terlihat,
-  `prefers-reduced-motion`), dan tombol salin email/telepon.
-
-## Struktur folder
+## Struktur File
 
 ```
-├── index.html
-├── css/
-│   └── style.css
-├── js/
-│   └── main.js
-├── assets/
-│   ├── img/          # screenshot proyek & foto profil
-│   └── cv/           # CV yang bisa diunduh pengunjung
+.
+├── index.html      # seluruh website (HTML + CSS + JS + gambar ter-embed base64)
+├── vercel.json     # konfigurasi minimal untuk Vercel (clean URLs)
+├── .gitignore
 └── README.md
 ```
 
-## Menjalankan secara lokal
+Karena ini website statis murni, **tidak ada proses build**. Semua gambar sudah di-encode langsung ke dalam `index.html` (base64), jadi tidak ada folder `assets/` terpisah — cukup satu file HTML yang bisa langsung dibuka di browser.
 
-Karena situs ini statis, cukup buka `index.html` langsung di browser,
-atau jalankan server lokal sederhana supaya path aset lebih konsisten:
+> **Catatan ukuran file:** `index.html` berukuran ±9MB karena banyak screenshot produk yang di-embed langsung sebagai base64. Ini aman untuk GitHub (jauh di bawah limit 100MB) dan Vercel (jauh di bawah limit ukuran static asset), tapi kalau nanti ingin dioptimasi lebih lanjut, gambar-gambar itu bisa dipindah ke file terpisah di folder `assets/` dan di-lazy-load. Untuk sekarang, tidak perlu diubah — cukup upload apa adanya.
+
+## Menjalankan di Lokal
+
+Paling gampang: cukup buka `index.html` langsung di browser (double click, atau drag ke tab browser).
+
+Kalau mau lewat local server (opsional, supaya lebih mirip production):
 
 ```bash
-python3 -m http.server 8080
-# lalu buka http://localhost:8080
+# pakai Python (biasanya sudah ada di macOS/Linux)
+python3 -m http.server 3000
+
+# atau pakai Node (kalau sudah install npx)
+npx serve .
 ```
 
-## Deploy ke GitHub Pages
+Lalu buka `http://localhost:3000`.
 
-1. Buat repository baru di GitHub, lalu push seluruh isi folder ini
-   (pastikan `index.html` berada di root repo).
-2. Buka **Settings → Pages**.
-3. Pada **Source**, pilih branch `main` dan folder `/ (root)`.
-4. Simpan — situs akan tersedia di
-   `https://<username>.github.io/<nama-repo>/` dalam beberapa menit.
+## Deploy ke GitHub
+
+1. Buat repository baru di GitHub (bisa lewat web, tombol **New repository** — jangan centang "Initialize with README" supaya tidak bentrok).
+2. Di folder project ini, jalankan:
+
+```bash
+git init
+git add .
+git commit -m "Initial commit: portfolio website"
+git branch -M main
+git remote add origin https://github.com/USERNAME/NAMA-REPO.git
+git push -u origin main
+```
+
+Ganti `USERNAME` dan `NAMA-REPO` sesuai punyamu.
 
 ## Deploy ke Vercel
 
-1. Push repo ini ke GitHub (lihat langkah di atas).
-2. Login ke [vercel.com](https://vercel.com) → **Add New… → Project**.
-3. Pilih repository ini. Vercel otomatis mendeteksinya sebagai situs
-   statis — biarkan *Build Command* dan *Output Directory* kosong.
-4. Klik **Deploy**. Selesai dalam waktu singkat, lengkap dengan URL
-   `https://<nama-proyek>.vercel.app`.
+### Opsi A — Lewat Dashboard Vercel (paling gampang)
 
-## Mengubah konten
+1. Buka [vercel.com](https://vercel.com) → login (bisa pakai akun GitHub).
+2. Klik **Add New... → Project**.
+3. Pilih/import repository GitHub yang tadi sudah di-push.
+4. Di layar konfigurasi:
+   - **Framework Preset**: pilih `Other` (Vercel biasanya otomatis mendeteksi ini sebagai static site).
+   - **Build Command**: kosongkan.
+   - **Output Directory**: kosongkan / biarkan default (root).
+5. Klik **Deploy**. Selesai — Vercel akan langsung serve `index.html` sebagai halaman utama.
 
-- **Teks & terjemahan** — semua string ada di satu tempat: objek
-  `translations` di `js/main.js` (kunci `id` dan `en`). Elemen HTML
-  menandai teks yang bisa diganti lewat atribut `data-i18n="kunci"`.
-- **Proyek** — tambah/ubah kartu proyek di `index.html` bagian
-  `#projects`, lalu taruh screenshot baru di `assets/img/`.
-- **CV** — ganti file di `assets/cv/CV_Muhammad_Azmy_Ikhwan.pdf` dengan
-  versi terbaru (nama file boleh sama supaya tautan unduh tidak perlu
-  diubah).
-- **Warna & tipografi** — semua token desain ada di bagian `:root` dan
-  `[data-theme="dark"]` pada `css/style.css`.
+Setiap kali kamu `git push` ke branch `main`, Vercel otomatis re-deploy.
 
-## Setelah deploy
+### Opsi B — Lewat Vercel CLI
 
-Beberapa hal kecil yang sebaiknya diperbarui setelah situs punya URL asli
-(dari GitHub Pages / Vercel):
+```bash
+npm i -g vercel
+vercel login
+vercel        # deploy preview
+vercel --prod # deploy ke production
+```
 
-- Di `index.html`, ganti komentar `TODO ganti dengan URL asli...` dan
-  tambahkan `<link rel="canonical" href="https://url-asli-kamu">`.
-- Ubah `og:image` dan `twitter:image` menjadi URL absolut
-  (mis. `https://url-asli-kamu/assets/img/profile.jpg`) supaya thumbnail
-  muncul dengan benar saat link dibagikan di WhatsApp/LinkedIn/X.
+Ikuti prompt-nya (pilih scope/team, konfirmasi nama project, dsb). Karena tidak ada build step, cukup jawab default di semua pertanyaan setup.
 
-## Kredit
+## Update Konten
 
-Screenshot proyek diambil dari materi portofolio pribadi (dribbble.com/muhazmyikh).
-Font: Space Grotesk, Inter, IBM Plex Mono (Google Fonts).
+Semua konten (daftar project, deskripsi module, gambar galeri modal) ada di dalam tag `<script>` di `index.html`, pada variabel `translations`, `moduleDetails`, dan `projects`. Edit langsung di situ, lalu commit & push — Vercel akan otomatis re-deploy.
