@@ -24,6 +24,9 @@
         p2: "Before that, I spent over a year at PT Infosys Solusi Terpadu designing digital banking products for Bank BTN, including internet banking and mobile banking apps. Across both, my process starts with the system, not the screen, understanding how information actually moves through a business before deciding how it should look.",
         eduLabel: "Education",
         eduValue: "Universitas Teknologi Yogyakarta · B.S. in Informatics (2016–2021)",
+        historyLabel: "Work Experience",
+        history1: "PT Lanius Inovasi Indonesia · UI/UX Designer (2023 – Now)",
+        history2: "PT Infosys Solusi Terpadu · UI/UX Designer (2021 – 2023)",
         skillsHeading: "Skills",
         toolsHeading: "Tools"
       },
@@ -68,6 +71,9 @@
         p2: "Sebelumnya, saya menghabiskan lebih dari satu tahun di PT Infosys Solusi Terpadu merancang produk perbankan digital untuk Bank BTN, termasuk aplikasi internet banking dan mobile banking. Di keduanya, proses saya selalu dimulai dari sistem, bukan dari tampilan, memahami bagaimana informasi benar-benar mengalir dalam sebuah bisnis sebelum menentukan bagaimana seharusnya tampil.",
         eduLabel: "Pendidikan",
         eduValue: "Universitas Teknologi Yogyakarta · S1 Informatika (2016–2021)",
+        historyLabel: "Riwayat Pekerjaan",
+        history1: "PT Lanius Inovasi Indonesia · UI/UX Designer (2023 – Sekarang)",
+        history2: "PT Infosys Solusi Terpadu · UI/UX Designer (2021 – 2023)",
         skillsHeading: "Skills",
         toolsHeading: "Tools"
       },

@@ -807,6 +807,22 @@
     font-size: 12.5px;
     margin-bottom: 4px;
   }
+  .about-history{
+    margin-top: 18px;
+    font-size: 13.5px;
+  }
+  .about-history .k{
+    display: block;
+    color: var(--muted);
+    font-size: 12.5px;
+    margin-bottom: 4px;
+  }
+  .about-history-item{
+    color: var(--text);
+  }
+  .about-history-item + .about-history-item{
+    margin-top: 3px;
+  }
   .tools-heading{
     font-family: 'Sora', sans-serif;
     font-size: clamp(26px, 4vw, 36px);
