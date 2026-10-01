@@ -774,9 +774,9 @@
     }
     .skill-badge .dot{ width: 7px; height: 7px; }
     .skill-badge.b1{ top: 6px; left: 4px; }
-    .skill-badge.b2{ top: 8%; left: 50%; transform: translateX(-4px) rotate(4deg); }
+    .skill-badge.b2{ top: 6px; right: 4px; transform: rotate(4deg); }
     .skill-badge.b3{ bottom: 18%; left: -6px; }
-    .skill-badge.b4{ bottom: 6px; right: 4px; }
+    .skill-badge.b4{ bottom: 18%; right: -6px; }
   }
   @media (max-width: 560px){
     .about-top{ grid-template-columns: 1fr; }
@@ -787,7 +787,7 @@
       max-width: calc(100vw - 24px);
     }
     .skill-badge.b1{ top: -4%; left: -6px; }
-    .skill-badge.b2{ top: 6%; left: 50%; transform: translateX(-4px) rotate(4deg); }
+    .skill-badge.b2{ top: -4%; right: -6px; transform: rotate(4deg); }
     .skill-badge.b3{ bottom: 16%; left: -6px; }
     .skill-badge.b4{ bottom: -8%; right: -6px; }
   }
